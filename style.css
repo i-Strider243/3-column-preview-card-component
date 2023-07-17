@@ -1,0 +1,132 @@
+*{
+    /* ### Primary ### */
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+
+    /* ### Neutral ### */
+        /*(paragraphs) */
+    --Transparent-white: hsla(0, 0%, 100%, 0.75);
+        /* (background, headings, buttons) */
+    --Very-light-gray: hsl(0, 0%, 95%);
+    
+    /* ### Font ### */
+    --Font-size: 15px;
+    --Family-Lexend-Deca: 'Big Shoulders Display', sans-serif;
+    --Weights: 400;
+    --Family-Big-Shoulders-Display: 'Lexend Deca', sans-serif;
+    --Weights: 700;
+
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: var(--Font-size);
+    font-family: var(--Family-Lexend-Deca);
+    color: var(--Very-light-gray);
+    padding: 4px;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--Very-light-gray);
+}
+
+section {
+    padding: 20px 0;
+    max-width: 375px;
+    margin: auto;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 80%;
+    padding: 2.5rem;
+    margin: 0 auto;
+    overflow: auto;
+}
+
+.card:nth-child(1) {
+    background-color: var(--Bright-orange);
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+}
+.card:nth-child(2) {
+    background-color: var(--Dark-cyan);
+}
+.card:nth-child(3) {
+    background-color: var(--Very-dark-cyan);
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
+
+.card-img {
+    width: 65px;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+.card-heading {
+    text-transform: uppercase;
+    font-size: 45px;
+}
+
+p {
+    color: var(--Transparent-white);
+    font-family: var(--Family-Big-Shoulders-Display);
+    line-height: 25px;
+}
+
+button {
+    border-radius: 2rem;
+    text-transform: capitalize;
+    padding: 0.5rem 1rem;
+    margin-top: 2rem;
+    width: max-content;
+    cursor: pointer;
+    border: 2px solid var(--Very-light-gray);
+    font-family: var(--Family-Big-Shoulders-Display);
+}
+
+.card:nth-child(1) button {
+    color: hsl(31, 77%, 52%);
+}
+
+.card:nth-child(2) button {
+    color: hsl(184, 100%, 22%);
+}
+
+.card:nth-child(3) button {
+    color: hsl(179, 100%, 13%);
+}
+
+.card button:hover {
+    color: hsl(0, 0%, 95%);
+    background-color: transparent;
+}
+
+@media screen and (min-width: 675px) {
+    section {
+        display: flex;
+        max-width: 900px;
+    }
+    .card:nth-child(1) {
+        border-top-left-radius: 0.5rem;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 0.5rem;
+    }
+    .card:nth-child(3) {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0.5rem;
+        border-top-right-radius: 0.5rem;
+    }
+}
