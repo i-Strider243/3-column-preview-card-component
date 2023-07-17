@@ -27,8 +27,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
-
+![3-column-preview-card-component | ](Screenshots/Desktop-view_17-7-2023_17726_.jpeg)
 
 ### Links
 
