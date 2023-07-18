@@ -32,7 +32,6 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
     background-color: var(--Very-light-gray);
 }
 
@@ -115,6 +114,9 @@ button {
 }
 
 @media screen and (min-width: 675px) {
+    body {
+        height: 100vh;
+    }
     section {
         display: flex;
         max-width: 900px;
